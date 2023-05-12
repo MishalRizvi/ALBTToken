@@ -4,6 +4,10 @@ contract ALBTToken{
     
     uint256 public totalSupply = 0; 
     mapping(address => uint) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance; //the first address is referring to the person doing the approval (myself) of another person spending x amount of tokens 
+                                                                      //the second address refers to the address of the person doing the spending of tokens 
+                                                                      //uint256 refers to the tokens being spent 
+                                                                      //allowance keeps track of the approved transactions 
 
     string public name = "ALBT Token";
     string public symbol = "ALBT";
@@ -15,6 +19,11 @@ contract ALBTToken{
         address indexed _to,
         uint256 _value
     ); 
+    event Approval(
+        address indexed _owner,
+        address indexed _spender, 
+        uint256 _value
+    );
 
     constructor(uint256 _initialSupply) public{
         balanceOf[msg.sender] = _initialSupply; //msg.sender is the address of the account that calls this function i.e. creates an instance of this token. 
@@ -34,5 +43,22 @@ contract ALBTToken{
         balanceOf[_to] += _value;
         emit Transfer(msg.sender, _to, _value);
         return true; 
+    }
+
+    function approve(address _spender, uint256 _value) public returns (bool success){ //in this func, msg.sender will be the one approving 
+        allowance[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value); 
+        return true;
+    }
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success){
+        require(balanceOf[_from] >= _value); 
+        require(allowance[_from][msg.sender] >= _value); 
+        balanceOf[_from] -= _value;
+        balanceOf[_to] += _value;
+
+        allowance[_from][msg.sender] -= _value;
+        
+        emit Transfer(_from, _to, _value); 
+        return true;
     }
 }
