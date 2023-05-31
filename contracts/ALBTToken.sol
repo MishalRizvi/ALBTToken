@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0;
+pragma solidity >=0.6.0;
 
 contract ALBTToken{
     
@@ -57,7 +57,7 @@ contract ALBTToken{
         balanceOf[_to] += _value;
 
         allowance[_from][msg.sender] -= _value;
-        
+
         emit Transfer(_from, _to, _value); 
         return true;
     }
