@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AlBt Token ICO Sale</title>
+        <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- <h1>AlBt Token ICO Sale</h1> -->
+        <div class="container" style="width:650px">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">ALBT TOKEN SALE</h1>
+                </div>
+                <hr />
+                <br />
+            </div>
+            <div id="loader">
+                <p class="text-center">Loading...</p>
+            </div>
+            <div id="content" class="text-center">
+                <p>
+                    Introducing AlBt Token (ALBT)!
+                    Token price is <span class="token-price"></span> Ether. You currently have <span class="dapp-balance"></span>&nbsp;ALBT.
+                </p>
+                <br />
+                <form role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="numberOfTokens" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-9]">
+                            <span class="input-group-button"></span>
+                            <button type="submit" class="btn btn-primary button-lg">Buy Tokens</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <div class="progress">
+                    <div id="progress" class="progress-bar progress-bar-striped active" aria-valuemin="0" aria-valumax="100"></div>
+                </div>
+                <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
+                <hr>
+                <p id="accountAddress"></p>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/web3/dist/web3.min.js"></script>
+        <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

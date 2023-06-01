@@ -1,6 +1,26 @@
 {
+  "name": "albt-token-sale",
+  "version": "1.0.0",
+  "description": "ALBT Token Sale ICO",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Mishal Zahra Rizvi",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
   "dependencies": {
+    "@truffle/contract": "^4.6.22",
+    "bootstrap": "^5.3.0",
     "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "truffle": "^5.9.2",
+    "truffle-contract": "^4.0.2",
+    "web3": "^1.10.0"
   }
 }

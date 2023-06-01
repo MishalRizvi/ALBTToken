@@ -106,12 +106,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"EndSale\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_buyer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Sell\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numberOfTokens\",\"type\":\"uint256\"}],\"name\":\"buyTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endSale\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract ALBTToken\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokenPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokensSold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ALBTTokenSale.sol\":\"ALBTTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ALBTToken.sol\":{\"keccak256\":\"0x8307a87eb3eae6414efa383dcd2ef7e4f4878d18c981e5a15dabb8b8c8b09dfa\",\"urls\":[\"bzz-raw://f1d012d679425f50901b169ad24c6a5aa3f73fa098658e94007ad3547b24acf5\",\"dweb:/ipfs/Qmet2XcfETmrRNgRFTYLL6z5tcEpVgX9D5CGnMDt8V2dTX\"]},\"project:/contracts/ALBTTokenSale.sol\":{\"keccak256\":\"0xaeea93a039f0f2a047c1549034e6c97251c45ce1601196786224eea27ae7028a\",\"urls\":[\"bzz-raw://4c4c2bcaf915e38ffebbb8d297db875ab39a0b6bc1903cf02267cac75e6c466d\",\"dweb:/ipfs/QmbsRe8NUpBn9emBAU2fEocftUtTe5chSsttoRrXiQt8mg\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516107a33803806107a38339818101604052604081101561003357600080fd5b810190808051906020019092919080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060028190555050506106bc806100e76000396000f3fe60806040526004361061004a5760003560e01c80633610724e1461004f578063380d831b1461007d578063518ab2a81461009457806355a373d6146100bf5780637ff9b59614610116575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610141565b005b34801561008957600080fd5b506100926103a9565b005b3480156100a057600080fd5b506100a9610628565b6040518082815260200191505060405180910390f35b3480156100cb57600080fd5b506100d461062e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012257600080fd5b5061012b610654565b6040518082815260200191505060405180910390f35b61014d8160025461065a565b341461015857600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156101f857600080fd5b505afa15801561020c573d6000803e3d6000fd5b505050506040513d602081101561022257600080fd5b8101908080519060200190929190505050101561023e57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156102e757600080fd5b505af11580156102fb573d6000803e3d6000fd5b505050506040513d602081101561031157600080fd5b810190808051906020019092919050505061032b57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461040257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561050157600080fd5b505afa158015610515573d6000803e3d6000fd5b505050506040513d602081101561052b57600080fd5b81019080805190602001909291905050506040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156105a557600080fd5b505af11580156105b9573d6000803e3d6000fd5b505050506040513d60208110156105cf57600080fd5b81019080805190602001909291905050506105e957600080fd5b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff16ff5b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600080821480610677575082828385029250828161067457fe5b04145b61068057600080fd5b9291505056fea26469706673582212207344a595d08211ec54a36f94605df41352f9a01d8e65416e87addfe850c5941f64736f6c63430006000033",
-  "deployedBytecode": "0x60806040526004361061004a5760003560e01c80633610724e1461004f578063380d831b1461007d578063518ab2a81461009457806355a373d6146100bf5780637ff9b59614610116575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610141565b005b34801561008957600080fd5b506100926103a9565b005b3480156100a057600080fd5b506100a9610628565b6040518082815260200191505060405180910390f35b3480156100cb57600080fd5b506100d461062e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012257600080fd5b5061012b610654565b6040518082815260200191505060405180910390f35b61014d8160025461065a565b341461015857600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156101f857600080fd5b505afa15801561020c573d6000803e3d6000fd5b505050506040513d602081101561022257600080fd5b8101908080519060200190929190505050101561023e57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156102e757600080fd5b505af11580156102fb573d6000803e3d6000fd5b505050506040513d602081101561031157600080fd5b810190808051906020019092919050505061032b57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461040257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561050157600080fd5b505afa158015610515573d6000803e3d6000fd5b505050506040513d602081101561052b57600080fd5b81019080805190602001909291905050506040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156105a557600080fd5b505af11580156105b9573d6000803e3d6000fd5b505050506040513d60208110156105cf57600080fd5b81019080805190602001909291905050506105e957600080fd5b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff16ff5b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b600080821480610677575082828385029250828161067457fe5b04145b61068057600080fd5b9291505056fea26469706673582212207344a595d08211ec54a36f94605df41352f9a01d8e65416e87addfe850c5941f64736f6c63430006000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"EndSale\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_buyer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Sell\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numberOfTokens\",\"type\":\"uint256\"}],\"name\":\"buyTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endSale\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract ALBTToken\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokenPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokensSold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ALBTTokenSale.sol\":\"ALBTTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ALBTToken.sol\":{\"keccak256\":\"0x8307a87eb3eae6414efa383dcd2ef7e4f4878d18c981e5a15dabb8b8c8b09dfa\",\"urls\":[\"bzz-raw://f1d012d679425f50901b169ad24c6a5aa3f73fa098658e94007ad3547b24acf5\",\"dweb:/ipfs/Qmet2XcfETmrRNgRFTYLL6z5tcEpVgX9D5CGnMDt8V2dTX\"]},\"project:/contracts/ALBTTokenSale.sol\":{\"keccak256\":\"0x5dc7a7f56ac496b5eac04a2dd4e97b27c5c48fe37c8d868cc2b1a834a01485fe\",\"urls\":[\"bzz-raw://79b851518210cc46a8a5912666c20787af75a6adeee8be38b2b17f5463f3c2ea\",\"dweb:/ipfs/QmTuqQ2B9LifVpnY4DK9faPPxmfWoo8jSUersgBCWtHrmY\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516107cf3803806107cf8339818101604052604081101561003357600080fd5b810190808051906020019092919080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060028190555050506106e8806100e76000396000f3fe60806040526004361061004a5760003560e01c80633610724e1461004f578063380d831b1461007d578063518ab2a81461009457806355a373d6146100bf5780637ff9b59614610116575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610141565b005b34801561008957600080fd5b506100926103a9565b005b3480156100a057600080fd5b506100a9610654565b6040518082815260200191505060405180910390f35b3480156100cb57600080fd5b506100d461065a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012257600080fd5b5061012b610680565b6040518082815260200191505060405180910390f35b61014d81600254610686565b341461015857600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156101f857600080fd5b505afa15801561020c573d6000803e3d6000fd5b505050506040513d602081101561022257600080fd5b8101908080519060200190929190505050101561023e57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156102e757600080fd5b505af11580156102fb573d6000803e3d6000fd5b505050506040513d602081101561031157600080fd5b810190808051906020019092919050505061032b57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461040257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561050157600080fd5b505afa158015610515573d6000803e3d6000fd5b505050506040513d602081101561052b57600080fd5b81019080805190602001909291905050506040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156105a557600080fd5b505af11580156105b9573d6000803e3d6000fd5b505050506040513d60208110156105cf57600080fd5b81019080805190602001909291905050506105e957600080fd5b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690507f76b1dda3669703163e95691bf7f5e8f0120ebd611cfe4b483fba4de5a0b1e12e60405160405180910390a18073ffffffffffffffffffffffffffffffffffffffff16ff5b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b6000808214806106a357508282838502925082816106a057fe5b04145b6106ac57600080fd5b9291505056fea2646970667358221220844644584db5a5db58de69ca21c9ad3e506529ced3678b25d1df321209e1858e64736f6c63430006000033",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c80633610724e1461004f578063380d831b1461007d578063518ab2a81461009457806355a373d6146100bf5780637ff9b59614610116575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610141565b005b34801561008957600080fd5b506100926103a9565b005b3480156100a057600080fd5b506100a9610654565b6040518082815260200191505060405180910390f35b3480156100cb57600080fd5b506100d461065a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012257600080fd5b5061012b610680565b6040518082815260200191505060405180910390f35b61014d81600254610686565b341461015857600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156101f857600080fd5b505afa15801561020c573d6000803e3d6000fd5b505050506040513d602081101561022257600080fd5b8101908080519060200190929190505050101561023e57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156102e757600080fd5b505af11580156102fb573d6000803e3d6000fd5b505050506040513d602081101561031157600080fd5b810190808051906020019092919050505061032b57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461040257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561050157600080fd5b505afa158015610515573d6000803e3d6000fd5b505050506040513d602081101561052b57600080fd5b81019080805190602001909291905050506040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156105a557600080fd5b505af11580156105b9573d6000803e3d6000fd5b505050506040513d60208110156105cf57600080fd5b81019080805190602001909291905050506105e957600080fd5b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690507f76b1dda3669703163e95691bf7f5e8f0120ebd611cfe4b483fba4de5a0b1e12e60405160405180910390a18073ffffffffffffffffffffffffffffffffffffffff16ff5b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b6000808214806106a357508282838502925082816106a057fe5b04145b6106ac57600080fd5b9291505056fea2646970667358221220844644584db5a5db58de69ca21c9ad3e506529ced3678b25d1df321209e1858e64736f6c63430006000033",
   "sourceMap": "52:1757:1:-:0;;;296:321;8:9:-1;5:2;;;30:1;27;20:12;5:2;296:321:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;296:321:1;;;;;;;;;;;;;;;;;;;;;;;;;378:10;370:5;;:18;;;;;;;;;;;;;;;;;;518:14;492:13;;:41;;;;;;;;;;;;;;;;;;599:11;586:10;:24;;;;296:321;;52:1757;;;;;;",
-  "deployedSourceMap": "52:1757:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;980:555;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;980:555:1;;;;;;;;;;;;;;;;;:::i;:::-;;1544:261;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1544:261:1;;;:::i;:::-;;169:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;169:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;101:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:30:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;137:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;980:555;1176:37;1185:15;1202:10;;1176:8;:37::i;:::-;1163:9;:50;1155:59;;;;;;1355:15;1313:13;;;;;;;;;;;:23;;;1345:4;1313:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1313:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1313:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1313:38:1;;;;;;;;;;;;;;;;:57;;1305:66;;;;;;1389:13;;;;;;;;;;;:22;;;1412:10;1424:15;1389:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1389:51:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1389:51:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1389:51:1;;;;;;;;;;;;;;;;1381:60;;;;;;1465:15;1451:10;;:29;;;;;;;;;;;1495:33;1500:10;1512:15;1495:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;980:555;:::o;1544:261::-;1602:5;;;;;;;;;;;1588:19;;:10;:19;;;1580:28;;;;;;1627:13;;;;;;;;;;;:22;;;1650:5;;;;;;;;;;;1657:13;;;;;;;;;;;:23;;;1689:4;1657:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1657:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1657:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1657:38:1;;;;;;;;;;;;;;;;1627:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1627:69:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1627:69:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1627:69:1;;;;;;;;;;;;;;;;1619:78;;;;;;1707:20;1738:5;;;;;;;;;;;1707:37;;1767:4;1754:18;;;169:25;;;;:::o;101:30::-;;;;;;;;;;;;;:::o;137:25::-;;;;:::o;623:350::-;680:6;940:1;935;:6;:30;;;;964:1;959;954;950;:5;946:9;;;945:15;;;;;;:20;935:30;927:39;;;;;;623:350;;;;:::o",
-  "source": "pragma solidity >=0.6.0;\nimport \"./ALBTToken.sol\";\n\ncontract ALBTTokenSale {\n\n    address admin;\n    ALBTToken public tokenContract;\n    uint256 public tokenPrice; \n    uint256 public tokensSold;\n\n    event Sell (\n       address _buyer, \n       uint256 _amount\n    );\n\n    event EndSale();\n\n\n    constructor(address _tokenContract, uint256 _tokenPrice) public {\n        admin = msg.sender; //The admin will be the person who calls this function, i.e. the one who deploys the contract\n        tokenContract = ALBTToken(_tokenContract); \n        //tokenContract = _tokenContract;\n        tokenPrice = _tokenPrice;\n    }\n\n    function multiply(uint x, uint y) internal pure returns (uint z) { //internal means function is not public, pure means there are no transactions taking place inside this function\n                                                                       // i.e. not reading/writing to the blockchain\n        require(y == 0 || (z = x * y) / y == x);\n    }\n\n\n    function buyTokens(uint256 _numberOfTokens) public payable { //payable means that the person who calls this function needs to send a number of wei in order to call it\n        require(msg.value == multiply(_numberOfTokens, tokenPrice)); //using multiply function for safe maths, in case _numberOfTokens is not an int \n        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);\n        require(tokenContract.transfer(msg.sender, _numberOfTokens));\n        tokensSold += _numberOfTokens;\n        emit Sell(msg.sender, _numberOfTokens);\n    }   \n\n    function endSale() public {\n        require(msg.sender == admin); \n        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));\n        address payable addr = payable(admin);\n        selfdestruct(addr);\n        emit EndSale(); \n\n    }\n\n\n}",
+  "deployedSourceMap": "52:1757:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;980:555;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;980:555:1;;;;;;;;;;;;;;;;;:::i;:::-;;1544:261;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1544:261:1;;;:::i;:::-;;169:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;169:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;101:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:30:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;137:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;980:555;1176:37;1185:15;1202:10;;1176:8;:37::i;:::-;1163:9;:50;1155:59;;;;;;1355:15;1313:13;;;;;;;;;;;:23;;;1345:4;1313:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1313:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1313:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1313:38:1;;;;;;;;;;;;;;;;:57;;1305:66;;;;;;1389:13;;;;;;;;;;;:22;;;1412:10;1424:15;1389:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1389:51:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1389:51:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1389:51:1;;;;;;;;;;;;;;;;1381:60;;;;;;1465:15;1451:10;;:29;;;;;;;;;;;1495:33;1500:10;1512:15;1495:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;980:555;:::o;1544:261::-;1602:5;;;;;;;;;;;1588:19;;:10;:19;;;1580:28;;;;;;1627:13;;;;;;;;;;;:22;;;1650:5;;;;;;;;;;;1657:13;;;;;;;;;;;:23;;;1689:4;1657:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1657:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1657:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1657:38:1;;;;;;;;;;;;;;;;1627:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1627:69:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1627:69:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1627:69:1;;;;;;;;;;;;;;;;1619:78;;;;;;1707:20;1738:5;;;;;;;;;;;1707:37;;1759:9;;;;;;;;;;1792:4;1779:18;;;169:25;;;;:::o;101:30::-;;;;;;;;;;;;;:::o;137:25::-;;;;:::o;623:350::-;680:6;940:1;935;:6;:30;;;;964:1;959;954;950;:5;946:9;;;945:15;;;;;;:20;935:30;927:39;;;;;;623:350;;;;:::o",
+  "source": "pragma solidity >=0.6.0;\nimport \"./ALBTToken.sol\";\n\ncontract ALBTTokenSale {\n\n    address admin;\n    ALBTToken public tokenContract;\n    uint256 public tokenPrice; \n    uint256 public tokensSold;\n\n    event Sell (\n       address _buyer, \n       uint256 _amount\n    );\n\n    event EndSale();\n\n\n    constructor(address _tokenContract, uint256 _tokenPrice) public {\n        admin = msg.sender; //The admin will be the person who calls this function, i.e. the one who deploys the contract\n        tokenContract = ALBTToken(_tokenContract); \n        //tokenContract = _tokenContract;\n        tokenPrice = _tokenPrice;\n    }\n\n    function multiply(uint x, uint y) internal pure returns (uint z) { //internal means function is not public, pure means there are no transactions taking place inside this function\n                                                                       // i.e. not reading/writing to the blockchain\n        require(y == 0 || (z = x * y) / y == x);\n    }\n\n\n    function buyTokens(uint256 _numberOfTokens) public payable { //payable means that the person who calls this function needs to send a number of wei in order to call it\n        require(msg.value == multiply(_numberOfTokens, tokenPrice)); //using multiply function for safe maths, in case _numberOfTokens is not an int \n        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);\n        require(tokenContract.transfer(msg.sender, _numberOfTokens));\n        tokensSold += _numberOfTokens;\n        emit Sell(msg.sender, _numberOfTokens);\n    }   \n\n    function endSale() public {\n        require(msg.sender == admin); \n        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));\n        address payable addr = payable(admin);\n        emit EndSale(); \n        selfdestruct(addr);\n\n    }\n\n\n}",
   "sourcePath": "/Users/mishalrizvi/Projects/ALBTToken/contracts/ALBTTokenSale.sol",
   "ast": {
     "absolutePath": "project:/contracts/ALBTTokenSale.sol",
@@ -2159,17 +2159,53 @@
                   "src": "1707:37:1"
                 },
                 {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 333,
+                      "name": "EndSale",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 205,
+                      "src": "1759:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 334,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1759:9:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 335,
+                  "nodeType": "EmitStatement",
+                  "src": "1754:14:1"
+                },
+                {
                   "expression": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 334,
+                        "id": 337,
                         "name": "addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 327,
-                        "src": "1767:4:1",
+                        "src": "1792:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -2183,51 +2219,15 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 333,
+                      "id": 336,
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 365,
-                      "src": "1754:12:1",
+                      "src": "1779:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable)"
-                      }
-                    },
-                    "id": 335,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1754:18:1",
-                    "tryCall": false,
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 336,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1754:18:1"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [],
-                    "expression": {
-                      "argumentTypes": [],
-                      "id": 337,
-                      "name": "EndSale",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 205,
-                      "src": "1787:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
-                        "typeString": "function ()"
                       }
                     },
                     "id": 338,
@@ -2238,7 +2238,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1787:9:1",
+                    "src": "1779:18:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -2246,8 +2246,8 @@
                     }
                   },
                   "id": 339,
-                  "nodeType": "EmitStatement",
-                  "src": "1782:14:1"
+                  "nodeType": "ExpressionStatement",
+                  "src": "1779:18:1"
                 }
               ]
             },
@@ -4531,67 +4531,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "isStructConstructorCall": false,
-                          "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
-                          "tryCall": false,
-                          "type": "tuple()",
-                          "type_conversion": false
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": [
-                                {
-                                  "typeIdentifier": "t_address_payable",
-                                  "typeString": "address payable"
-                                }
-                              ],
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 365,
-                              "type": "function (address payable)",
-                              "value": "selfdestruct"
-                            },
-                            "id": 333,
-                            "name": "Identifier",
-                            "src": "1754:12:1"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 327,
-                              "type": "address payable",
-                              "value": "addr"
-                            },
-                            "id": 334,
-                            "name": "Identifier",
-                            "src": "1767:4:1"
-                          }
-                        ],
-                        "id": 335,
-                        "name": "FunctionCall",
-                        "src": "1754:18:1"
-                      }
-                    ],
-                    "id": 336,
-                    "name": "ExpressionStatement",
-                    "src": "1754:18:1"
-                  },
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
                           "arguments": [
                             null
                           ],
@@ -4620,19 +4559,80 @@
                               "type": "function ()",
                               "value": "EndSale"
                             },
+                            "id": 333,
+                            "name": "Identifier",
+                            "src": "1759:7:1"
+                          }
+                        ],
+                        "id": 334,
+                        "name": "FunctionCall",
+                        "src": "1759:9:1"
+                      }
+                    ],
+                    "id": 335,
+                    "name": "EmitStatement",
+                    "src": "1754:14:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 365,
+                              "type": "function (address payable)",
+                              "value": "selfdestruct"
+                            },
+                            "id": 336,
+                            "name": "Identifier",
+                            "src": "1779:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 327,
+                              "type": "address payable",
+                              "value": "addr"
+                            },
                             "id": 337,
                             "name": "Identifier",
-                            "src": "1787:7:1"
+                            "src": "1792:4:1"
                           }
                         ],
                         "id": 338,
                         "name": "FunctionCall",
-                        "src": "1787:9:1"
+                        "src": "1779:18:1"
                       }
                     ],
                     "id": 339,
-                    "name": "EmitStatement",
-                    "src": "1782:14:1"
+                    "name": "ExpressionStatement",
+                    "src": "1779:18:1"
                   }
                 ],
                 "id": 340,
@@ -4662,12 +4662,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x2a2fC53D4379DA5c6f46B860aB997678fB75e23d",
-      "transactionHash": "0x4d66ec1b9cf44ef6d17e575c4d78cf6ccc77130a1687d746f779ab36f09f44ef"
+      "address": "0xff3A06ff9fa3B684a82c5805b3f0d7C939F8c1fd",
+      "transactionHash": "0xcee51aecefb02300cd6c479dd8584b711ac505fc824e897a2464c604fd7997fc"
     }
   },
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-05-31T14:49:29.891Z",
+  "updatedAt": "2023-05-31T14:58:08.029Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
