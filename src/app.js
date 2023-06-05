@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 function load() {
     connectToBlockchain();
-    render();
+    render(); //Load account here 
     loadContract();
 }
 
@@ -31,33 +31,38 @@ async function connectToBlockchain() {
     else {
         window.alert("Please connect to Metamask.")
     }
-    // // Modern dapp browsers...
-    // if (window.ethereum) {
-    //     web3 = new Web3(ethereum)
-    //     try {
-    //         // Request account access if needed
-    //         //await ethereum.enable()
-    //         await ethereum.eth_requestAccounts()
-    //         // Acccounts now exposed
-    //         web3.eth.sendTransaction({from:'0xDF5E4Ebf3CAA3479A189aB342c5Cb5933bB97c96'})
-    //     } catch (error) {
-    //         // User denied account access...
-    //     }
-    // }
-    // // Legacy dapp browsers...
-    // else if (window.web3) {
-    //     web3Provider = web3.currentProvider
-    //     web3 = new Web3(web3.currentProvider)
-    //     // Acccounts always exposed
-    //     web3.eth.sendTransaction({/* ... */ })
-    // }
-    // // Non-dapp browsers...
-    // else {
-    //     console.log('Non-Ethereum browser detected. You should consider trying MetaMask!')
-    // }
+    // Modern dapp browsers...
+    if (window.ethereum) {
+        web3 = new Web3(ethereum)
+        try {
+            // Request account access if needed
+            //await ethereum.enable()
+            await ethereum.eth_requestAccounts()
+            // Acccounts now exposed
+            //web3.eth.sendTransaction({from:'0xDF5E4Ebf3CAA3479A189aB342c5Cb5933bB97c96'})
+        } catch (error) {
+            // User denied account access...
+        }
+        window.ethereum.on('accountsChanged', function (accounts) {
+            // Time to reload your interface with accounts[0]!
+            load();
+          })
+    }
+    // Legacy dapp browsers...
+    else if (window.web3) {
+        web3Provider = web3.currentProvider
+        web3 = new Web3(web3.currentProvider)
+        // Acccounts always exposed
+        web3.eth.sendTransaction({/* ... */ })
+    }
+    // Non-dapp browsers...
+    else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    }
 }
 
 async function loadContract() {
+    //Load token sale contract
     const ALBTTokenSale = await $.getJSON('ALBTTokenSale.json');
     contracts.ALBTTokenSale = TruffleContract(ALBTTokenSale);
     contracts.ALBTTokenSale.setProvider(web3Provider);
@@ -69,15 +74,23 @@ async function loadContract() {
     $(".token-price").html(web3.utils.fromWei(tokenPrice, "ether"));
     tokensSoldTemp = await ALBTTokenSaleDeployed.tokensSold();
     tokensSold = tokensSoldTemp;
-    console.log("Tokens sold: " + tokensSoldTemp.toNumber())
+    console.log("Tokens sold: " + tokensSold)
     $(".tokens-sold").html(tokensSoldTemp.toNumber());
     $(".tokens-available").html(tokensAvailable);
 
+    //Load token contract
     const ALBTToken = await $.getJSON('ALBTToken.json');
     contracts.ALBTToken = TruffleContract(ALBTToken);
     contracts.ALBTToken.setProvider(web3Provider);
     ALBTTokenDeployed = await contracts.ALBTToken.deployed();
     console.log("ALBT Token Address: " + ALBTTokenDeployed.address);
+    balanceTemp = await ALBTTokenDeployed.balanceOf(account);
+    balance = balanceTemp;
+    console.log("balance: " + balance);
+    $(".albt-balance").html(balance.toNumber());
+    var progressPercent = tokensSold/tokensAvailable * 100;
+    $("#progress").css('width', progressPercent + '%');
+    setLoading(false);
 }
 
 async function render() {
@@ -86,7 +99,6 @@ async function render() {
     }
     setLoading(true);
     loadAccount();
-    //await renderTasks();
     setLoading(false);
 }
 
@@ -105,11 +117,31 @@ async function setLoading(bool) {
 
 async function loadAccount() {
     web3.eth.getAccounts().then(function(result) {
-        account = result[0];
-        console.log("account: " + account);
-        $("#accountAddress").html("Your account: " + account);
+        if (account != null) {
+            account = result[0];
+            $("#accountAddress").html("Your account: " + account);
+            console.log("account: " + account);
+        }
     })
 }
-async function renderTasks() {
-
+async function buyTokens() {
+    setLoading(true);
+    const numberOfTokens = $("#numberOfTokens").val();
+    console.log(numberOfTokens + "not");
+    const buyTokensReciept = await ALBTTokenSaleDeployed.buyTokens(numberOfTokens, {from:account, value:numberOfTokens*tokenPrice, gas:500000});
+    // console.log("Tokens brought");
+    // buyTokensReciept.on('data', event => {
+    //     console.log(res);
+    //     buyTokensReciept.stopWatching();
+    // })
+    $("form").trigger("reset"); //Reset number of tokens in form
+    window.location.reload();
 }
+
+// async function listenForEvents() {
+//     buyTokens();
+//     ALBTTokenSaleDeployed.({}, {fromBlock:0, toBlock:'latest'}).watch(function (error,event) {
+//         console.log("Error triggered");
+//         render();
+//     })
+// }
